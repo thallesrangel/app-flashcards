@@ -352,6 +352,7 @@ $(function () {
 
 
 
+/// Recog
 
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
@@ -361,8 +362,8 @@ recognition.continuous = true;
 
 $(document).ready(function () {
     var isListening = false;
-    var finalTranscript = ''; // Parte já confirmada pelo reconhecimento
-    var interimTranscript = ''; // Parte temporária, ainda em reconhecimento
+    var finalTranscript = ''; 
+    var interimTranscript = '';
 
     function startRecognition() {
         recognition.start();
@@ -429,8 +430,7 @@ $(document).ready(function () {
             finalTranscript = currentText;
             interimTranscript = '';
         }
-    });
-    
+    });    
 
     recognition.onend = function () {
         if (isListening) recognition.start();
