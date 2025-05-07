@@ -1,66 +1,182 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# TODO
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Aprendizado com IA
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Correção com pontuação CEFR (A1, A2, B1, B2...) — Classificação do nível da frase corrigida.
+- Análise de erros recorrentes — “Você erra muito o uso de preposições, veja essas dicas…”
+- Sugestões personalizadas de estudo — Ex: “Pratique perguntas no passado com foco em ‘Did you…’”
+- Favoritos e revisão manual — O usuário marca cards para revisar depois.
+- Integração com ferramentas externas (ex: Google Translate, DeepL para comparação).
+- Áudio com voz natural — Para treinar listening e pronúncia.
+- Leitura em voz alta do usuário com feedback de pronúncia (pode usar Web Speech API).
+- Notificações inteligentes — "Você não estuda há 3 dias, bora revisar o que você esqueceu?"
+- Conquistas — Para engajamento e gamificação.
+- Tempo médio de resposta por card — Para medir fluência.
+- Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Chat com IA
+Modos de conversa: casual, entrevista de emprego, viagem, negócios etc.
+Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Outros
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Aprendizado reverso: O sistema mostra uma frase correta e o usuário tenta "desfazer" a correção — ou seja, apontar os possíveis erros que levaram àquela versão.
+Isso treina pensamento crítico linguístico, como um professor.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+Tandem IA-humano - ver os flashcards de outras pessoas
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+///
+Personalidades da IA
+O usuário pode escolher com quem estudar:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Professor britânico formal
 
-## Code of Conduct
+Jovem americano informal
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Entrevistador de emprego
 
-## Security Vulnerabilities
+Guia turístico
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Isso muda vocabulário, tom, correções e velocidade de resposta.
 
-## License
+///
+ Missões semanais criativas
+Exemplo:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+“Crie um post de Instagram em inglês sobre seu dia”
+
+“Escreva uma mensagem romântica”
+
+“Defenda um ponto de vista polêmico”
+
+A IA avalia criatividade, vocabulário e coesão, não só gramática.
+
+///
+
+
+Feedback fonético: “O som do th está incorreto, tente como em think”
+
+
+
+🎭 Roleplay com IA (Simulador de Situações)
+Situações simuladas (check-in em hotel, entrevista, pedir comida) onde a IA responde em tempo real.
+
+O aluno escolhe o cenário e interage por voz ou texto.
+
+IA pode adaptar o nível de complexidade dinamicamente.
+
+///
+
+
+📝 Redações Temáticas Semanais
+Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
+
+A IA corrige e dá uma nota por coesão, coerência, gramática e vocabulário.
+
+Pode virar até um portfólio de escrita do aluno.
+///
+🎯 Metas personalizadas por categoria
+Exemplo: “Esta semana, quero dominar 15 verbos irregulares”
+
+O sistema adapta flashcards, textos e diálogos para essa meta.
+///
+
+📅 Calendário de fluência
+Um painel com:
+
+O que foi estudado
+
+O que falta estudar
+
+Ciclos de revisão por cor (verde: fluente, amarelo: revisar, vermelho: esquecido)
+
+Totalmente integrado com vocabulário e erros do aluno.
+
+///
+
+👨‍🏫 Relatório para professores ou pais (modo estudo supervisionado)
+Se for usado em escolas ou por pais, gera:
+
+Relatório de progresso
+
+Erros mais comuns
+
+Tempo de estudo
+
+Sugestões de aula baseadas nos dados reais
+
+///
+
+
+
+🧬 Mapa Mental da Fluência
+IA gera um mapa visual interativo com:
+
+Tópicos dominados
+
+Tópicos pendentes
+
+Ligações entre gramática, vocabulário, situações reais
+
+O aluno vê o inglês como um ecossistema em vez de partes soltas.
+
+///
+
+🧩 Desafios de construção de frases
+O aluno recebe palavras soltas e precisa montar frases corretas.
+
+A IA valida e explica por que está certa ou errada.
+
+Pode ser com frases reais que ele errou antes — reconstrução ativa do erro.
+
+///
+
+🎙️ Pronúncia com IA + Espelhamento de Voz
+O aluno grava a frase e o sistema mostra:
+
+Um comparativo visual da onda sonora com um nativo
+
+Feedback fonético: “O som do th está incorreto, tente como em think”
+
+Pode usar Web Speech API ou serviços como Azure Speech.
+
+//
+
+🧠 Expansão Inteligente
+Quando o usuário domina uma palavra, o sistema:
+
+Sugere sinônimos e variações (ex: “happy” → “cheerful”, “content”, “thrilled
+///
+
+
+🕹️ Mundo de Missões (tipo “Duolingo + ChatGPT”)
+Ao invés de só flashcards, o aluno tem um mapa com missões:
+
+“Missão aeroporto”
+
+“Missão entrevista”
+
+“Missão flertar em inglês”
+
+Cada missão envolve escrever, falar, ouvir, responder a perguntas e corrigir frases — tudo com IA contextual.
+
+Libera itens ou conquistas no mapa.
+
+
+////
+
+📚 Modo “clone do aluno”
+A IA simula um aluno virtual com os mesmos erros e vocabulário do usuário.
+
+O aluno precisa ensinar seu clone virtual.
+
+Isso obriga o usuário a explicar regras, corrigir erros e aplicar conhecimento — excelente técnica de retenção (efeito Feynman).
+
+///

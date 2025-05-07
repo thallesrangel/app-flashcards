@@ -109,9 +109,9 @@
 
   
     // Habilita o botão quando digitar algo
-    $('#content').on('input', function () {
-      $('#send-message').prop('disabled', $(this).val().trim() === '');
-    });
+    // $('#content').on('input', function () {
+    //   $('#send-message').prop('disabled', $(this).val().trim() === '');
+    // });
   </script>
 
 
