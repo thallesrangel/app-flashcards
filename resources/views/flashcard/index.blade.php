@@ -16,7 +16,7 @@
                         <i class="bi bi-clipboard-data me-2"></i> Dashboard
                     </a>
 
-                    <a href="" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+                    <a href="{{ route('chat-ia') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                         <i class="bi bi-chat-right me-2"></i> Conversation
                     </a>
                 

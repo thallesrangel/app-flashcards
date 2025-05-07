@@ -25,6 +25,7 @@ $(document).ready(function() {
             success: function(response) {
                 $('#idea-phrase').text(response.content);
                 $('#loadingModal').modal('hide');
+                $('#btn-new-words').click();
             },
             error: function(xhr) {
                 $('#loadingModal').modal('hide');

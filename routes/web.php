@@ -8,6 +8,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FlashcardController;
 use App\Http\Controllers\FlashcardItemController;
 
+
+use App\Http\Controllers\ChatIaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,4 +55,10 @@ Route::prefix('categories')->group(function () {
     Route::post('/', [CategoryController::class, 'store']);
     Route::delete('/{id}', [CategoryController::class, 'destroy']);
     Route::get('/list', [CategoryController::class, 'list']);
+});
+
+
+Route::prefix('chat-ia')->group(function () {
+    Route::get('/', [ChatIaController::class, 'index'])->name('chat-ia');
+    Route::post('/talk-ia', [ChatIaController::class, 'talkIa']);
 });
