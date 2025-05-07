@@ -11,3 +11,32 @@
     color: #fff; /* cor do texto da aba ativa */
     background-color: #000; /* fundo preto na aba ativa */
 }
+.colores {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(
+      74deg,
+      #ff6b6b 0%,
+      #feca57 20%,
+      #48dbfb 40%,
+      #1dd1a1 60%,
+      #5f27cd 80%
+    );
+    background-size: 400% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 25s linear infinite;
+  }
+  
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 400% 50%;
+    }
+  }
+  

@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12">
-                <h2 class="fw-semibold">Aprenda Inglês com Flashcards</h2>
+                <h2 class="fw-semibold colores">Aprenda Inglês com Flashcards</h2>
                 <p class="text-muted fs-5">Crie flashcards, pratique seu inglês e receba feedback com inteligência artificial.</p>
 
                 <div class="d-flex justify-content-between mb-4">
