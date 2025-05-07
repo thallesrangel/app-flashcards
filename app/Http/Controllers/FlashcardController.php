@@ -195,4 +195,68 @@ class FlashcardController extends Controller
         }
 
     }
+
+
+    public function newWord(Request $request)
+    {
+        $apiKey = env('CHATGPT_KEY');
+        $model = 'gpt-4o-mini';
+        $temperature = 1;
+        $apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+        $prompt = <<<EOT
+        Você é um especialista em criar palavras em inglês para ajudar os alunos a praticarem.
+        Baseado nas informações abaixo, gere uma lista de palavras relevantes ao tema.
+        Retorne as palavras separadas por vírgula e sem numeração.
+        EOT;
+        
+        $userMessage = "O título do flashcard é: {$request->flashcard_title}, a frase atual é: {$request->idea_phrase} e o nível de inglês é: {$request->level}";
+        
+        $data = [
+            'model' => $model,
+            'temperature' => $temperature,
+            'messages' => [
+                ['role' => 'system', 'content' => $prompt],
+                ['role' => 'user', 'content' => $userMessage]
+            ]
+        ];        
+        
+        $client = new Client();
+
+        try {
+            $response = $client->post($apiUrl, [
+                'json' => $data,
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $apiKey,
+                    'Content-Type' => 'application/json',
+                ]
+            ]);
+
+
+            $res = $response->getBody()->getContents();
+
+            $responseData = json_decode($res, true);
+
+            $rawContent = $responseData['choices'][0]['message']['content'] ?? '';
+
+            if (json_last_error() === JSON_ERROR_NONE) {
+                return [
+                    'content' => $rawContent,
+                    'usage' => $responseData['usage'] ?? '',
+                    'model' => $responseData['model'] ?? ''
+                ];
+            } else {
+                return [
+                    'error' => 'Erro ao interpretar resposta da IA.',
+                    'raw' => $rawContent
+                ];
+            }
+
+        } catch (\Exception $e) {
+            return [
+                'error' => 'Erro na requisição: ' . $e->getMessage()
+            ];
+        }
+
+    }
 }

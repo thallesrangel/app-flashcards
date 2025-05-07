@@ -29,7 +29,71 @@ $(document).ready(function() {
         });
     });
 
+    $('#btn-new-words').on('click', function(e) {
+        e.preventDefault();
+    
+        const flashcard_title = $('#flashcard-title').text();
+        const idea_phrase = $('#idea-phrase').text();
+        const level = $('#level-selector').val();
+    
+        $('#word-container').empty();
+    
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    
+        $.ajax({
+            url: `${APP_URL}/flashcard/new-word`,
+            method: 'POST',
+            data: {
+                flashcard_title: flashcard_title,
+                idea_phrase: idea_phrase,
+                level: level
+            },
+            success: function(response) {
+                const content = response.content || '';
+                
+                const wordsArray = content.split(',').map(word => word.trim()).filter(Boolean);
+            
+                $.each(wordsArray, function(index, word) {
+                    const safeWord = word.replace(/\s+/g, '-').toLowerCase();
+                    const radioButtonId = 'word-' + safeWord;
+                
+                    const radioButtonHtml = `
+                        <input type="radio" 
+                               class="btn-check word-option" 
+                               name="word"
+                               id="${radioButtonId}" 
+                               value="${word}"
+                               autocomplete="off">
+                        <label class="btn btn-sm btn-outline-primary me-1 mb-1" for="${radioButtonId}">
+                            ${word.charAt(0).toUpperCase() + word.slice(1)}
+                        </label>
+                    `;
+                
+                    $('#word-container').append(radioButtonHtml);
+                });
+            },            
+            error: function(xhr) {
+                alert('Erro', 'Não foi possível gerar uma nova palavra.');
+            }
+        });
+    });
 
+    // Adiciona a palavra ao textarea
+    $(document).off('change', '.word-option').on('change', '.word-option', function() {
+        const selectedWord = $(this).val();
+        const textarea = $('#content');
+        const currentText = textarea.val();
+    
+        textarea.val(currentText + (currentText ? ' ' : '') + selectedWord);
+    });
+
+
+
+    
 
     $('#btn-check-text-ia').on('click', function(e) {
         e.preventDefault();

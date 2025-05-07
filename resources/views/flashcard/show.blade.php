@@ -32,7 +32,27 @@
                             <button id="btn-new-idea" class="btn btn-sm btn-default"><i class="bi bi-arrow-clockwise"></i> New Idea</button>
                         </div>
 
-                        {{-- <p class="fw-bold">Suggested Vocabulary:</p> --}}
+                        <p class="fw-bold">Suggested Vocabulary:</p>
+
+                        <div class="mb-4">
+                            <div class="mb-2" id="word-container"></div>
+
+                            <div class="d-inline-flex align-items-center">
+                                <select id="level-selector"
+                                        class="form-select form-select-sm w-auto"
+                                        aria-label="Select level">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediary">Intermediary</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                              
+                                <button id="btn-new-words"
+                                        class="btn btn-sm btn-default ms-2">
+                                  <i class="bi bi-arrow-clockwise"></i> New Words
+                                </button>
+                            </div>
+                              
+                        </div>
 
                         <p class="fw-bold">Your Text:</p>
 

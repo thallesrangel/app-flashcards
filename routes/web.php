@@ -36,6 +36,7 @@ Route::prefix('flashcard')->group(function () {
     Route::get('/practice/{flashcard_id}/pdf', [FlashcardController::class, 'generatePdf'])->name('flashcard.pdf');
 
     Route::post('/new-idea', [ FlashcardController::class, 'newIdea' ]);
+    Route::post('/new-word', [ FlashcardController::class, 'newWord' ]);
 });
 
 Route::prefix('flashcard-item')->group(function () {
