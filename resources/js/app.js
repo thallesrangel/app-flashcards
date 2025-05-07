@@ -347,3 +347,92 @@ $(function () {
         });
     }    
 });
+
+
+
+
+
+
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
+recognition.lang = 'en-US';
+recognition.interimResults = true;
+recognition.continuous = true;
+
+$(document).ready(function () {
+    var isListening = false;
+    var finalTranscript = ''; // Parte já confirmada pelo reconhecimento
+    var interimTranscript = ''; // Parte temporária, ainda em reconhecimento
+
+    function startRecognition() {
+        recognition.start();
+        isListening = true;
+        $('#btn-gravar').text('Pause');
+    }
+
+    function stopRecognition() {
+        recognition.stop();
+        isListening = false;
+        $('#btn-gravar').text('Start Recording');
+    }
+
+    recognition.onresult = function (event) {
+        interimTranscript = ''; // limpa o que estava antes
+
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+            var transcript = event.results[i][0].transcript;
+
+            if (event.results[i].isFinal) {
+                finalTranscript += transcript + ' ';
+            } else {
+                interimTranscript += transcript;
+            }
+        }
+
+        // Atualiza o campo com o texto final + temporário
+        $('#content').val(finalTranscript + interimTranscript);
+    };
+
+    $('#btn-gravar').click(function (e) {
+        e.preventDefault();
+        if (!isListening) {
+            startRecognition();
+        } else {
+            stopRecognition();
+        }
+    });
+
+    
+    $('#content').on('input', function () {
+        const currentText = $(this).val();
+        const fullTranscript = finalTranscript + interimTranscript;
+    
+        if (currentText === '') {
+            // Usuário apagou tudo
+            finalTranscript = '';
+            interimTranscript = '';
+        } else if (currentText === fullTranscript) {
+            // Nada mudou de fato, mantém como está
+            return;
+        } else if (fullTranscript.startsWith(currentText)) {
+            // Usuário apagou parte final (normalmente com backspace)
+            const removedLength = fullTranscript.length - currentText.length;
+            if (interimTranscript.length >= removedLength) {
+                interimTranscript = interimTranscript.slice(0, -removedLength);
+            } else {
+                const diff = removedLength - interimTranscript.length;
+                interimTranscript = '';
+                finalTranscript = finalTranscript.slice(0, -diff);
+            }
+        } else {
+            // Usuário editou manualmente, aceita como novo ponto de partida
+            finalTranscript = currentText;
+            interimTranscript = '';
+        }
+    });
+    
+
+    recognition.onend = function () {
+        if (isListening) recognition.start();
+    };
+});
