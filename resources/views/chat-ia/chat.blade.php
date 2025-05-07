@@ -6,13 +6,13 @@
 
   <style>
    .chat-window {
-  height: 300px;
-  overflow-y: auto;
-  background-color: #f8f9fa;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  position: relative;
-}
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+  }
     .chat-placeholder {
       padding: 4rem 1rem;
       color: #6c757d;
@@ -35,7 +35,9 @@
       
       <div class="chat-window mb-3 position-relative">
         <div class="chat-placeholder text-center">
-          <i class="bi bi-chat-dots fs-1 mb-3 d-block opacity-50"></i>
+
+          <i class="bi bi-chat-right-dots fs-1 mb-3 d-block opacity-50"></i>
+
           <p>Start a conversation to practice your English skills.</p>
           <p class="small">Try asking a question or introducing yourself.</p>
         </div>
@@ -45,8 +47,8 @@
 
 
       <div class="mb-3 d-flex gap-2">
-        <button type="button" id="conversation-starter-ideas" class="btn btn-outline-secondary">
-          <i class="bi bi-lightbulb me-2"></i> Conversation Starter
+        <button type="button" id="conversation-starter-ideas" class="btn btn-outline-dark rounded-pill px-4 py-2">
+          Conversation Starter <i class="bi bi-lightbulb me-2"></i>
         </button>
         <button class="btn btn-dark rounded-pill px-4 py-2" id="btn-gravar">
             Gravar <i class="bi bi-mic"></i>
@@ -56,7 +58,7 @@
       
       <div class="d-flex gap-2">
         <textarea class="form-control" id="content" placeholder="Type your message here..." rows="3"></textarea>
-        <button type="button" id="send-message" class="btn btn-primary align-self-end">
+        <button type="button" id="send-message" class="btn btn-dark rounded-pill px-4 py-2 align-self-end">
           Send
         </button>
       </div>
