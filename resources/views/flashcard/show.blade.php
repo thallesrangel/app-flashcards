@@ -11,7 +11,7 @@
             <i class="bi bi-arrow-left"></i> Voltar para lista
         </a>
 
-        <h3 class="fw-semibold mb-2">{{ $flashcard->title }}</h3>
+        <h3 id="flashcard-title" class="fw-semibold mb-2">{{ $flashcard->title }}</h3>
         <p>
             <span class="badge bg-dark me-3"><span id="practice-count">0</span> práticas</span>
 
@@ -22,9 +22,20 @@
             <div class="card border rounded-4">
                 <div class="card-body p-4">
                     <div class="mb-4">
-                        <label class="form-label fw-semibold">Pratique seu inglês</label>
-                        <p class="text-muted">Escreva um texto em inglês e receba feedback da IA para melhorar suas habilidades</p>
-        
+                        <h4 class="fw-bold">Pratice Your English</h4>
+                        
+                        <p class="text-muted">Write in English below to practice with AI and improve. Try using the suggested vocabulary words.</p>
+
+                        <div class="bg-light p-3 rounded mb-2 ">
+                            <p class="fw-bold">Idea to pratice:</p>
+                            <p id="idea-phrase">Tell the basics about the subject</p>
+                            <button id="btn-new-idea" class="btn btn-sm btn-default"><i class="bi bi-arrow-clockwise"></i> New Idea</button>
+                        </div>
+
+                        {{-- <p class="fw-bold">Suggested Vocabulary:</p> --}}
+
+                        <p class="fw-bold">Your Text:</p>
+
                         <textarea 
                             class="form-control rounded-3" 
                             name="content"
@@ -93,7 +104,7 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-historic" role="tabpanel" aria-labelledby="pills-historic-tab">
                 
-                <a href="{{ route('flashcard.pdf', $flashcard->id) }}" target="_blank" class="btn btn-sm btn-dark">
+                <a href="{{ route('flashcard.pdf', $flashcard->id) }}" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
                     Gerar PDF completo das práticas
                 </a>
 

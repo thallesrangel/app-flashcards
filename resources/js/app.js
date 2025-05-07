@@ -1,6 +1,36 @@
 import './bootstrap';
 
 $(document).ready(function() {
+
+    $('#btn-new-idea').on('click', function(e) {
+        e.preventDefault();
+ 
+        const flashcard_title = $('#flashcard-title').text();
+    
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    
+        $.ajax({
+            url: `${APP_URL}/flashcard/new-idea`,
+            method: 'POST',
+            data: {
+                flashcard_title: flashcard_title,
+          
+            },
+            success: function(response) {
+                $('#idea-phrase').text(response.content);
+            },
+            error: function(xhr) {
+                alert_error('Erro', 'Não foi possível gerar uma nova frase.');
+            }
+        });
+    });
+
+
+
     $('#btn-check-text-ia').on('click', function(e) {
         e.preventDefault();
         
@@ -119,7 +149,7 @@ $(document).ready(function() {
                     <h6 class="card-subtitle mb-2">Feedback:</h6>
                     <p class="card-text text-warning">${item.feedback}</p>
 
-                    <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark">
+                    <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
                         Baixar em PDF <i class="bi bi-download"></i>
                     </a>
                 </div>

@@ -5,7 +5,7 @@
           <a href="https://www.linkedin.com/in/rangelthr/" target="_blank" class="text-primary text-decoration-none">
             <i class="bi bi-linkedin fs-3"></i>
           </a>
-          <p>Este sistema é de uso livre e pode ser modificado sem restrições.</p>
+          <p>Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
