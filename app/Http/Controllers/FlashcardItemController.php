@@ -25,9 +25,8 @@ class FlashcardItemController extends Controller
 
         $prompt = <<<EOT
         Você é um professor de inglês. Sua tarefa é corrigir o texto enviado pelo aluno (mantendo a correção em inglês) e fornecer um feedback separado, claro e construtivo **em português**.
-
+        Explique claramente, se necessário, alguma correção.    
         Retorne no seguinte formato JSON:
-
         {
         "corrigido": "<texto corrigido em inglês>",
         "feedback": "<comentário construtivo e breve em português sobre o texto apenas se necessário.>"
