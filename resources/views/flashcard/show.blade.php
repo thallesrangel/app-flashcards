@@ -78,16 +78,24 @@
                         </div>
                     </div>
 
-                    <div class="text-end">
-                        <button 
-                        class="btn btn-dark rounded-pill px-4 py-2" 
-                        id="btn-gravar"
-                        >Gravar <i class="bi bi-mic"></i></button>
-        
-                        <button id="btn-check-text-ia" class="btn btn-dark rounded-pill px-4 py-2">
-                            Verificar texto com IA <i class="bi bi-stars"></i>
-                        </button>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-start">
+                            <a class="btn btn-outline-dark rounded-pill px-4 py-2" href="">
+                                Reset <i class="bi bi-x-circle"></i>
+                            </a>
+                        </div>
+                    
+                        <div class="text-end ms-auto">
+                            <button class="btn btn-dark rounded-pill px-4 py-2" id="btn-gravar">
+                                Gravar <i class="bi bi-mic"></i>
+                            </button>
+                    
+                            <button id="btn-check-text-ia" class="btn btn-dark rounded-pill px-4 py-2">
+                                Verificar texto com IA <i class="bi bi-stars"></i>
+                            </button>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </form>
