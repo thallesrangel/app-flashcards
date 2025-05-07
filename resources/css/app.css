@@ -1,4 +1,13 @@
-
 #logo-img {
     max-width: 60px;
+}
+
+.nav-pills .nav-link {
+    color: #000; /* cor do texto normal */
+    background-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+    color: #fff; /* cor do texto da aba ativa */
+    background-color: #000; /* fundo preto na aba ativa */
 }

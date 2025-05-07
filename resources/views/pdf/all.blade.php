@@ -164,19 +164,19 @@
 
             <!-- Texto original -->
             <h6>Texto original:</h6>
-            <p class="content-text text-muted">{{ $item->content }}</p>
+            <p class="content-text">{{ $item->content }}</p>
 
             <div class="divider"></div>
 
             <!-- Texto corrigido -->
-            <h6>Texto corrigido:</h6>
-            <p class="content-text text-success">{{ $item->corrected_content }}</p>
+            <h6 class="text-success">Texto corrigido:</h6>
+            <p class="content-text">{{ $item->corrected_content }}</p>
 
             <div class="divider"></div>
 
             <!-- Feedback -->
-            <h6>Feedback:</h6>
-            <p class="content-text text-warning">{{ $item->feedback }}</p>
+            <h6 class="text-warning">Feedback:</h6>
+            <p class="content-text">{{ $item->feedback }}</p>
         </div>
     </div>
 @endforeach

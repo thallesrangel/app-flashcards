@@ -163,19 +163,19 @@
 
         <!-- Texto original -->
         <h6>Texto original:</h6>
-        <p class="content-text text-muted">{{ $practice->content }}</p>
+        <p class="content-text">{{ $practice->content }}</p>
 
         <div class="divider"></div>
 
         <!-- Texto corrigido -->
-        <h6>Texto corrigido:</h6>
-        <p class="content-text text-success">{{ $practice->corrected_content }}</p>
+        <h6 class="text-success">Texto corrigido:</h6>
+        <p class="content-text">{{ $practice->corrected_content }}</p>
 
         <div class="divider"></div>
 
         <!-- Feedback -->
-        <h6>Feedback:</h6>
-        <p class="content-text text-warning">{{ $practice->feedback }}</p>
+        <h6 class="text-warning">Feedback:</h6>
+        <p class="content-text">{{ $practice->feedback }}</p>
     </div>
 </div>
 

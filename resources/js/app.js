@@ -205,13 +205,13 @@ $(document).ready(function() {
                     </p>        
 
                     <h6 class="card-subtitle mb-2">Texto original:</h6>
-                    <p class="card-text text-muted">${item.content}</p>
+                    <p class="card-text">${item.content}</p>
                     
-                    <h6 class="card-subtitle mb-2">Texto corrigido:</h6>
-                    <p class="card-text text-success">${item.corrected_content}</p>
+                    <h6 class="card-subtitle mb-2 text-success">Texto corrigido:</h6>
+                    <p class="card-text">${item.corrected_content}</p>
                     
-                    <h6 class="card-subtitle mb-2">Feedback:</h6>
-                    <p class="card-text text-warning">${item.feedback}</p>
+                    <h6 class="card-subtitle mb-2 text-warning">Feedback:</h6>
+                    <p class="card-text">${item.feedback}</p>
 
                     <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
                         Baixar em PDF <i class="bi bi-download"></i>
