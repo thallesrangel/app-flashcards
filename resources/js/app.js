@@ -7,6 +7,8 @@ $(document).ready(function() {
  
         const flashcard_title = $('#flashcard-title').text();
     
+        $('#loadingModal').modal('show');
+        
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -22,8 +24,10 @@ $(document).ready(function() {
             },
             success: function(response) {
                 $('#idea-phrase').text(response.content);
+                $('#loadingModal').modal('hide');
             },
             error: function(xhr) {
+                $('#loadingModal').modal('hide');
                 alert_error('Erro', 'Não foi possível gerar uma nova frase.');
             }
         });
@@ -36,6 +40,8 @@ $(document).ready(function() {
         const idea_phrase = $('#idea-phrase').text();
         const level = $('#level-selector').val();
     
+        $('#loadingModal').modal('show');
+
         $('#word-container').empty();
     
         $.ajaxSetup({
@@ -75,8 +81,11 @@ $(document).ready(function() {
                 
                     $('#word-container').append(radioButtonHtml);
                 });
+
+                $('#loadingModal').modal('hide');
             },            
             error: function(xhr) {
+                $('#loadingModal').modal('hide');
                 alert('Erro', 'Não foi possível gerar uma nova palavra.');
             }
         });
@@ -125,6 +134,7 @@ $(document).ready(function() {
             
                 $('#ia-result-corrected-content').text(response.corrigido);
                 $('#ia-result-feedback').text(response.feedback);
+
             },
             error: function(xhr, status, error) {
                 $('#loadingModal').modal('hide');

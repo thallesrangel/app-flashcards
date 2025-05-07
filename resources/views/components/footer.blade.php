@@ -2,7 +2,7 @@
     <div class="container p-4">
       <div class="row justify-content-center text-center">
         <div class="col-auto">
-          <a href="https://www.linkedin.com/in/rangelthr/" target="_blank" class="text-dark text-decoration-none">
+          <a href="https://www.linkedin.com/in/rangelthr/" target="_blank" class="text-dark text-decoration-none me-3">
             <i class="bi bi-linkedin fs-3"></i>
           </a>
 
