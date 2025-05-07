@@ -368,7 +368,7 @@ $(document).ready(function () {
     function startRecognition() {
         recognition.start();
         isListening = true;
-        $('#btn-gravar').text('Pause');
+        $('#btn-gravar').text('Pause').append(' <i class="bi bi-mic-mute"></i>');
     }
 
     function stopRecognition() {

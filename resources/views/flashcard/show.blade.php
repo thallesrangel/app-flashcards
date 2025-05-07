@@ -82,7 +82,7 @@
                         <button 
                         class="btn btn-dark rounded-pill px-4 py-2" 
                         id="btn-gravar"
-                        >Gravar</button>
+                        >Gravar <i class="bi bi-mic"></i></button>
         
                         <button id="btn-check-text-ia" class="btn btn-dark rounded-pill px-4 py-2">
                             Verificar texto com IA <i class="bi bi-stars"></i>
