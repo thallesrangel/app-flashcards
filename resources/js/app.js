@@ -320,10 +320,13 @@ $(document).ready(function() {
 
 
 $(document).ready(function () {
-    $.get('/flashcard/stats', function (data) {
-        renderFrequency(data.frequency);
-        renderDifficulty(data.levelsPerDay);
-    });
+
+    if (window.location.pathname.startsWith('/flashcard/show/')) {
+        $.get('/flashcard/stats', function (data) {
+            renderFrequency(data.frequency);
+            renderDifficulty(data.levelsPerDay);
+        });
+    }
 
     function renderFrequency(frequency) {
         const container = $('#week-grid');

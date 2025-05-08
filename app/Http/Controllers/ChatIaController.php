@@ -19,8 +19,15 @@ class ChatIaController extends Controller
         $temperature = 0.2;
         $apiUrl = 'https://api.openai.com/v1/chat/completions';
 
+        $conversation_mode = "";
+
+        if(isset($request->conversation_mode)) {
+            $conversation_mode = "O modo da conversa é :" . $request->conversation_mode;
+        }
+        
         $prompt = <<<EOT
         Você é um professor de inglês amigável e experiente. Sua tarefa é manter uma conversa construtiva em inglês com alunos que estão praticando o idioma. 
+        $conversation_mode
         Sempre responda de forma clara, educacional e encorajadora. 
         Corrija erros sutilmente quando necessário, e estimule o aluno a continuar conversando, fazendo novas perguntas ou comentários. 
         Evite traduzir para o português — mantenha toda a conversa em inglês. 

@@ -97,9 +97,16 @@
 
 
 <script>
-    $('#send-message').on('click', function () {
+    $('#send-message').on('click', function (e) {
+      e.preventDefault();
+
     const message = $('#content').val().trim();
-    if (!message) return;
+    const conversation_mode = $('#conversationMode').val();
+
+    if (!message) {
+      alert_error('Erro', "Escreva um texto para praticar.");
+      return;
+    }
 
     // Oculta o placeholder
     $('.chat-placeholder').hide();
@@ -122,7 +129,7 @@
     $.ajax({
         url: `${APP_URL}/chat-ia/talk-ia`,
         method: 'POST',
-        data: { content: message },
+        data: { content: message, conversation_mode: conversation_mode},
         success: function (response) {
         $('#chat-messages').append(`
             <div class="text-start mb-2">
