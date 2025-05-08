@@ -33,7 +33,8 @@ Tandem IA-humano - ver os flashcards de outras pessoas
 
 
 ///
- Missões semanais criativas
+Missões semanais criativas
+
 Exemplo:
 
 “Crie um post de Instagram em inglês sobre seu dia”
