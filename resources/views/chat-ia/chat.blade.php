@@ -44,8 +44,6 @@
         <div id="chat-messages" class="px-2 pt-2"></div>
       </div>
       
-
-
       <div class="mb-3 d-flex gap-2">
         <button type="button" id="conversation-starter-ideas" class="btn btn-outline-dark rounded-pill px-4 py-2">
           Conversation Starter <i class="bi bi-lightbulb me-2"></i>

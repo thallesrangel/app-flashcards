@@ -115,6 +115,7 @@ $(document).ready(function() {
 
         var contractData = {
             content: $('#content').val(),
+            ai_personality: $('#ai-personality').val()
         };
 
         $.ajaxSetup({

@@ -9,7 +9,7 @@ use Mpdf\Mpdf;
 
 class FlashcardItemController extends Controller
 {
-    private $flashcardModel;
+    private $flashcardItemModel;
 
     public function __construct()
     {
@@ -23,8 +23,10 @@ class FlashcardItemController extends Controller
         $temperature = 1;
         $apiUrl = 'https://api.openai.com/v1/chat/completions';
 
+        $personality = $request->ai_personality;
+
         $prompt = <<<EOT
-        Você é um professor de inglês. Sua tarefa é corrigir o texto enviado pelo aluno (mantendo a correção em inglês) e fornecer um feedback separado, claro e construtivo **em português**.
+        Você é um professor de inglês com uma personalidade {$personality}. Sua tarefa é corrigir o texto enviado pelo aluno (mantendo a correção em inglês) e fornecer um feedback separado, claro e construtivo **em português**.
         Explique claramente, se necessário, alguma correção.    
         Retorne no seguinte formato JSON:
         {
@@ -32,7 +34,7 @@ class FlashcardItemController extends Controller
         "feedback": "<comentário construtivo e breve em português sobre o texto apenas se necessário.>"
         }
         EOT;
-
+        
         $userMessage = "Texto: {$request->content}";
 
         $data = [

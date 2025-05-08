@@ -33,20 +33,6 @@ Tandem IA-humano - ver os flashcards de outras pessoas
 
 
 ///
-Personalidades da IA
-O usuário pode escolher com quem estudar:
-
-Professor britânico formal
-
-Jovem americano informal
-
-Entrevistador de emprego
-
-Guia turístico
-
-Isso muda vocabulário, tom, correções e velocidade de resposta.
-
-///
  Missões semanais criativas
 Exemplo:
 
@@ -61,9 +47,7 @@ A IA avalia criatividade, vocabulário e coesão, não só gramática.
 ///
 
 
-Feedback fonético: “O som do th está incorreto, tente como em think”
-
-
+Feedback fonético: “O som do th está incorreto, tente como em think”    
 
 🎭 Roleplay com IA (Simulador de Situações)
 Situações simuladas (check-in em hotel, entrevista, pedir comida) onde a IA responde em tempo real.

@@ -54,7 +54,24 @@
                               
                         </div>
 
-                        <p class="fw-bold">Your Text:</p>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="fw-bold mb-0">Your Text:</p>
+                            <div class="d-flex align-items-center">
+                              <label for="ai-personality" class="me-2 mb-0">Personalidade da IA:</label>
+                              <select id="ai-personality" class="form-select form-select-sm" style="width: auto;">
+                                <option value="professor">Professor</option>
+                                <option value="prestativo">Prestativo</option>
+                                <option value="divertida">Divertida</option>
+                                <option value="objetiva">Objetiva</option>
+                                <option value="paciente">Paciente</option>
+                                <option value="motivacional">Motivacional</option>
+                                <option value="rigorosa">Rigorosa</option>
+                                <option value="interativa">Interativa</option>
+                                <option value="explicativa">Explicativa</option>
+                                <option value="resumida">Resumida</option>
+                              </select>                              
+                            </div>
+                        </div>
 
                         <textarea 
                             class="form-control rounded-3" 
