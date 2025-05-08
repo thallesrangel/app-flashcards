@@ -7,8 +7,9 @@
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12">
-                <h2 class="fw-semibold colores">Aprenda Inglês com Flashcards e IA</h2>
-                <p class="text-muted fs-5">Crie flashcards, pratique seu inglês e receba feedback com inteligência artificial.</p>
+                <h2 class="fw-semibold colores">Learn English with Flashcards and AI</h2>
+                <p class="text-muted fs-5">Create flashcards, practice your English, and receive feedback powered by artificial intelligence.</p>
+                
 
                 <div class="d-flex justify-content-between mb-4">
                     
@@ -21,7 +22,7 @@
                     </a>
                 
                     <a href="{{ route('flashcard.create') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
-                        <i class="bi bi-plus-lg me-2"></i> Criar flashcard
+                        <i class="bi bi-plus-lg me-2"></i> Create flashcard
                     </a>
                 </div>
             </div>

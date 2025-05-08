@@ -25,7 +25,7 @@
 <div class="container">
 
     <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">
-        <i class="bi bi-arrow-left"></i> Voltar para lista
+        <i class="bi bi-arrow-left"></i> Back to list
     </a>
 
   <div class="card shadow-sm">
@@ -33,6 +33,38 @@
       <h3 class="card-title">Conversation Practice</h3>
       <p class="text-muted">Practice your English by having a conversation with an AI partner.</p>
       
+      <label for="conversationMode" class="form-label small fw-bold">Conversation Mode:</label>
+      
+      <select id="conversationMode" class="form-select form-select-sm d-inline w-auto">
+        <option value="" selected>Select a mode</option>
+      
+        <optgroup label="Everyday Life">
+          <option value="casual">Casual</option>
+          <option value="shopping">Shopping</option>
+          <option value="restaurant">Restaurants</option>
+          <option value="phone">Phone call</option>
+        </optgroup>
+      
+        <optgroup label="Travel & Emergencies">
+          <option value="travel">Travel / Airport / Hotel</option>
+          <option value="emergency">Emergency situations</option>
+          <option value="doctor">Doctor appointment</option>
+        </optgroup>
+      
+        <optgroup label="Professional">
+          <option value="job-interview">Job interview</option>
+          <option value="business">Business</option>
+          <option value="meeting">Meetings</option>
+          <option value="presentation">Presentation</option>
+        </optgroup>
+      
+        <optgroup label="Academic">
+          <option value="school">School environment</option>
+          <option value="university">College / University</option>
+        </optgroup>
+      </select>
+      
+
       <div class="chat-window mb-3 position-relative">
         <div class="chat-placeholder text-center">
 

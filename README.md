@@ -12,13 +12,10 @@
 - Conquistas — Para engajamento e gamificação.
 - Tempo médio de resposta por card — Para medir fluência.
 - Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
-
-
--Feedback fonético: “O som do th está incorreto, tente como em think”    
+- Feedback fonético: “O som do th está incorreto, tente como em think”    
 
 
 ### Chat com IA
-Modos de conversa: casual, entrevista de emprego, viagem, negócios etc.
 Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
 
 ### Outros
@@ -27,22 +24,21 @@ Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
 Isso treina pensamento crítico linguístico, como um professor.
 
 
-
 Tandem IA-humano - ver os flashcards de outras pessoas
 
 
 ///
 Missões semanais criativas
 
-Exemplo:
+    Exemplo:
 
-“Crie um post de Instagram em inglês sobre seu dia”
+    “Crie um post de Instagram em inglês sobre seu dia”
 
-“Escreva uma mensagem romântica”
+    “Escreva uma mensagem romântica”
 
-“Defenda um ponto de vista polêmico”
+    “Defenda um ponto de vista polêmico”
 
-A IA avalia criatividade, vocabulário e coesão, não só gramática.
+    A IA avalia criatividade, vocabulário e coesão, não só gramática.
 
 ///
 

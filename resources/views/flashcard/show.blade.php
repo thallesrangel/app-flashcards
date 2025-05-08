@@ -8,7 +8,7 @@
         <input type="hidden" id="flashcard_id" name="flashcard_id" value="{{ $flashcard->id }}">
 
         <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">
-            <i class="bi bi-arrow-left"></i> Voltar para lista
+            <i class="bi bi-arrow-left"></i> Back to list
         </a>
 
         <h3 id="flashcard-title" class="fw-semibold mb-2">{{ $flashcard->title }}</h3>
