@@ -27,9 +27,8 @@
     <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">
         <i class="bi bi-arrow-left"></i> Back to list
     </a>
-
     
-    <div class="row mb-2">
+    <div class="row mb-4">
         <div class="col-12">
             <a href="{{ route('chat-ia') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                 Composition
@@ -42,7 +41,6 @@
     </div>
 
  
-
   <div class="card">
     <div class="card-body">
         <h4 class="fw-bold">Composition</h4>
@@ -118,9 +116,9 @@
 
   
         <div class="d-flex justify-content-between align-items-center w-100 mb-3">
-            <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2">
+            <a  href="{{ route('composition')}}" class="btn btn-outline-dark rounded-pill px-4 py-2">
                 New Composition
-            </button>
+            </a>
 
             <button type="button" id="btn-check-composition-ia" class="btn btn-dark rounded-pill px-4 py-2">
                 Correct Composition <i class="bi bi-stars"></i>
