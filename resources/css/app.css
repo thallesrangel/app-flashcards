@@ -40,3 +40,103 @@
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Cards */
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  
+  /* Inputs, Selects, Textareas */
+  body.dark-mode input.form-control,
+  body.dark-mode select.form-select,
+  body.dark-mode textarea.form-control {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444;
+  }
+  
+  body.dark-mode input.form-control::placeholder,
+  body.dark-mode textarea.form-control::placeholder {
+    color: #bbb;
+  }
+  
+  /* Focus states */
+  body.dark-mode input.form-control:focus,
+  body.dark-mode select.form-select:focus,
+  body.dark-mode textarea.form-control:focus {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #666;
+    box-shadow: none;
+  }
+  
+  /* Buttons */
+  body.dark-mode .btn {
+    color: #ffffff;
+    background-color: #333;
+    border-color: #444;
+  }
+  
+  body.dark-mode .btn:hover {
+    background-color: #444;
+    border-color: #555;
+  }
+  
+  /* Labels */
+  body.dark-mode label {
+    color: #e0e0e0;
+  }
+  
+  /* Borders gerais */
+  body.dark-mode .border {
+    border-color: #444 !important;
+  }
+  
+  /* Dropdowns, listas e outros */
+  body.dark-mode .dropdown-menu {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #333;
+  }
+  
+  body.dark-mode .dropdown-item {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .dropdown-item:hover {
+    background-color: #333;
+  }
+
+  body.dark-mode .bg-light {
+    background-color: #333 !important;
+    color: #ffffff;
+  }
+
+  body.dark-mode .text-dark {
+    color: #ffffff !important;
+  }
+
+
+
+
+
+
+
+  

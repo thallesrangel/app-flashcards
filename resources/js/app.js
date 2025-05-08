@@ -1,5 +1,31 @@
 import './bootstrap';
 
+
+$(function () {
+    const darkModeKey = 'darkModeEnabled';
+  
+    // Verifica se o dark mode estava ativado anteriormente
+    if (localStorage.getItem(darkModeKey) === 'true') {
+      $('body').addClass('dark-mode');
+      $('#toggleDark').html('<i class="bi bi-brightness-high-fill me-1"></i>');
+    }
+  
+    $('#toggleDark').on('click', function () {
+      const isDark = $('body').toggleClass('dark-mode').hasClass('dark-mode');
+  
+      // Atualiza texto do botão
+      $(this).html(
+        isDark
+          ? '<i class="bi bi-brightness-high-fill me-1"></i>'
+          : '<i class="bi bi-moon-fill me-1"></i>'
+      );
+  
+      // Salva preferência no localStorage
+      localStorage.setItem(darkModeKey, isDark);
+    });
+});
+
+
 $(document).ready(function() {
 
     $('#btn-new-idea').on('click', function(e) {
