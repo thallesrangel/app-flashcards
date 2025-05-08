@@ -219,15 +219,34 @@ $(document).ready(function() {
                     <h6 class="card-subtitle mb-2">Texto original:</h6>
                     <p class="card-text">${item.content}</p>
                     
-                    <h6 class="card-subtitle mb-2 text-success">Texto corrigido:</h6>
-                    <p class="card-text">${item.corrected_content}</p>
-                    
-                    <h6 class="card-subtitle mb-2 text-warning">Feedback:</h6>
-                    <p class="card-text">${item.feedback}</p>
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="card-subtitle text-success mb-0">Texto corrigido</h6>
+                        <button class="btn btn-sm btn-outline-dark rounded-pill speak-corrected-content" data-id="${item.id}" title="Ouvir texto corrigido">
+                            <i class="bi bi-volume-up"></i>
+                        </button>
+                    </div>
 
-                    <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
-                        Baixar em PDF <i class="bi bi-download"></i>
-                    </a>
+                    
+                    <p class="card-text corrected-content-text" data-id="${item.id}">${item.corrected_content}</p>
+
+                
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="card-subtitle mb-2 text-warning">Feedback:</h6>
+
+                        <button class="btn btn-sm btn-outline-dark rounded-pill speak-feedback" data-id="${item.id}" title="Ouvir Feedback">
+                            <i class="bi bi-volume-up"></i>
+                        </button>
+                    </div>
+
+
+                    <p class="card-text feedback-text" data-id="${item.id}">${item.feedback}</p>
+
+
+                    <div class="d-flex gap-2">
+                        <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
+                            Baixar em PDF <i class="bi bi-download"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         `;
@@ -478,7 +497,6 @@ $(document).ready(function () {
             stopRecognition();
         }
     });
-
     
     $('#content').on('input', function () {
         const currentText = $(this).val();
@@ -511,4 +529,81 @@ $(document).ready(function () {
     recognition.onend = function () {
         if (isListening) recognition.start();
     };
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).on('click', '.speak-corrected-content', function () {
+    const id = $(this).data('id');
+
+    const feedbackText = $(`.corrected-content-text[data-id="${id}"]`).text();
+
+    if (!window.speechSynthesis) {
+        alert('Seu navegador não suporta leitura por voz.');
+        return;
+    }
+
+    if (!feedbackText) {
+        alert('Nenhum texto de corrigido encontrado.');
+        return;
+    }
+
+    // Interrompe qualquer fala em andamento
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(feedbackText.trim());
+
+    utterance.lang = 'en-US'; // ou 'pt-BR' se desejar
+    
+    // Eventos de debug (opcional)
+    utterance.onstart = () => console.log('Leitura iniciada');
+    utterance.onerror = (e) => console.error('Erro na leitura:', e);
+    utterance.onend = () => console.log('Leitura finalizada');
+
+    window.speechSynthesis.speak(utterance);
+});
+
+
+
+
+$(document).on('click', '.speak-feedback', function () {
+    const id = $(this).data('id');
+
+    const feedbackText = $(`.feedback-text[data-id="${id}"]`).text();
+
+    if (!window.speechSynthesis) {
+        alert('Seu navegador não suporta leitura por voz.');
+        return;
+    }
+
+    if (!feedbackText) {
+        alert('Nenhum texto de feedback encontrado.');
+        return;
+    }
+
+    // Interrompe qualquer fala em andamento
+    window.speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(feedbackText.trim());
+
+    // utterance.lang = 'en-US'; // ou 'pt-BR' se desejar
+    utterance.lang = 'pt-BR';
+    
+    // Eventos de debug (opcional)
+    utterance.onstart = () => console.log('Leitura iniciada');
+    utterance.onerror = (e) => console.error('Erro na leitura:', e);
+    utterance.onend = () => console.log('Leitura finalizada');
+
+    window.speechSynthesis.speak(utterance);
 });

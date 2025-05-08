@@ -1,6 +1,3 @@
-
-
-
 # TODO
 
 ### Aprendizado com IA
@@ -11,11 +8,13 @@
 - Favoritos e revisão manual — O usuário marca cards para revisar depois.
 - Integração com ferramentas externas (ex: Google Translate, DeepL para comparação).
 - Áudio com voz natural — Para treinar listening e pronúncia.
-- Leitura em voz alta do usuário com feedback de pronúncia (pode usar Web Speech API).
 - Notificações inteligentes — "Você não estuda há 3 dias, bora revisar o que você esqueceu?"
 - Conquistas — Para engajamento e gamificação.
 - Tempo médio de resposta por card — Para medir fluência.
 - Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
+
+
+-Feedback fonético: “O som do th está incorreto, tente como em think”    
 
 
 ### Chat com IA
@@ -47,8 +46,6 @@ A IA avalia criatividade, vocabulário e coesão, não só gramática.
 
 ///
 
-
-Feedback fonético: “O som do th está incorreto, tente como em think”    
 
 🎭 Roleplay com IA (Simulador de Situações)
 Situações simuladas (check-in em hotel, entrevista, pedir comida) onde a IA responde em tempo real.

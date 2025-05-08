@@ -52,7 +52,6 @@
             Gravar <i class="bi bi-mic"></i>
         </button>
       </div>
-
       
       <div class="d-flex gap-2">
         <textarea class="form-control" id="content" placeholder="Type your message here..." rows="3"></textarea>
@@ -63,8 +62,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 <script>

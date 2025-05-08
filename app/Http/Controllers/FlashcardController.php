@@ -26,7 +26,10 @@ class FlashcardController extends Controller
 
     public function index()
     {
-        $data = $this->flashcardModel->withCount('flashcardItems')->paginate();
+        $data = $this->flashcardModel
+                    ->withCount('flashcardItems')
+                    ->orderBy('created_at', 'desc')
+                    ->paginate();
         
         return view('flashcard.index', ['data' => $data]);
     }
