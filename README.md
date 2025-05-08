@@ -42,17 +42,6 @@ Missões semanais criativas
 
 ///
 
-
-🎭 Roleplay com IA (Simulador de Situações)
-Situações simuladas (check-in em hotel, entrevista, pedir comida) onde a IA responde em tempo real.
-
-O aluno escolhe o cenário e interage por voz ou texto.
-
-IA pode adaptar o nível de complexidade dinamicamente.
-
-///
-
-
 📝 Redações Temáticas Semanais
 Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
 
@@ -119,11 +108,8 @@ Pode ser com frases reais que ele errou antes — reconstrução ativa do erro.
 🎙️ Pronúncia com IA + Espelhamento de Voz
 O aluno grava a frase e o sistema mostra:
 
-Um comparativo visual da onda sonora com um nativo
-
 Feedback fonético: “O som do th está incorreto, tente como em think”
-
-Pode usar Web Speech API ou serviços como Azure Speech.
+Pode usar Web Speech API
 
 //
 

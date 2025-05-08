@@ -10,6 +10,7 @@ use App\Http\Controllers\FlashcardItemController;
 
 
 use App\Http\Controllers\ChatIaController;
+use App\Http\Controllers\CompositionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +62,10 @@ Route::prefix('categories')->group(function () {
 Route::prefix('chat-ia')->group(function () {
     Route::get('/', [ChatIaController::class, 'index'])->name('chat-ia');
     Route::post('/talk-ia', [ChatIaController::class, 'talkIa']);
+});
+
+Route::prefix('composition')->group(function () {
+    Route::get('/', [CompositionController::class, 'index'])->name('composition');
+    Route::post('/check-text', [ CompositionController::class, 'checkText' ]);
+    Route::post('/new-idea', [ CompositionController::class, 'newIdea' ]);
 });

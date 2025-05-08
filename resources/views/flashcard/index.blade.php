@@ -20,6 +20,10 @@
                     <a href="{{ route('chat-ia') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                         <i class="bi bi-chat-right me-2"></i> Conversation
                     </a>
+
+                    <a href="{{ route('composition') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+                        <i class="bi bi-chat-right me-2"></i> Composition
+                    </a>
                 
                     <a href="{{ route('flashcard.create') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                         <i class="bi bi-plus-lg me-2"></i> Create flashcard

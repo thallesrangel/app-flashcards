@@ -6,7 +6,7 @@
 
 <div class="container">
     <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">
-        <i class="bi bi-arrow-left"></i> Voltar
+        <i class="bi bi-arrow-left"></i> Back to list
     </a>
 
     <h3 class="fw-semibold mb-4">Criar Novo Flashcard</h3>
