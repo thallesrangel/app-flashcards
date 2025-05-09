@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('components.navbar');
+    @include('components.navbar')
 
     <div class="container">
         <div class="row mb-5 text-center">
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 
-        </div>
+            </div>
 
         @if($data->isEmpty())
             <div class="card border-0">

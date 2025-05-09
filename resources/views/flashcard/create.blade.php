@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('components.navbar');
+@include('components.navbar')
 
 <div class="container">
     <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">

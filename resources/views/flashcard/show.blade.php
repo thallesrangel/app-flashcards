@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('components.navbar');
+    @include('components.navbar')
 
     <div class="container">
         <input type="hidden" id="flashcard_id" name="flashcard_id" value="{{ $flashcard->id }}">

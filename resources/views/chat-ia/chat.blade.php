@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('components.navbar');
+    @include('components.navbar')
 
   <style>
    .chat-window {

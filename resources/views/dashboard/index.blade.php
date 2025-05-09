@@ -2,7 +2,7 @@
 
 @section('content')
 
-  @include('components.navbar');
+  @include('components.navbar')
 
   <div class="container">
     <a href="{{ route('flashcard') }}" class="btn btn-default mb-4">
@@ -13,7 +13,8 @@
     <p class="text-muted text-center">Acompanhe seu progresso e gerencie seu aprendizado de inglês</p>
 
     <div class="row">
-        <div class="col-4">
+      <div class="col-12 col-sm-6 col-md-4 mt-2">
+
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
@@ -26,7 +27,8 @@
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-12 col-sm-6 col-md-4 mt-2">
+
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
@@ -39,7 +41,8 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-12 col-sm-6 col-md-4 mt-2">
+
             <div class="card">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center mb-2">
@@ -114,7 +117,8 @@
     </div>
     
     <div class="row">
-        <div class="col-6 mt-5">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-5">
+
           <h5 class="mb-2">Categorias mais praticadas</h5>
 
           @forelse ($categoryStats as $cat)
@@ -140,7 +144,9 @@
           @endforelse
       </div>
 
-      <div class="col-6 mt-5">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-5">
+
+
         <h5 class="mb-2">Distribuição de tempo por categoria</h5>
     
         @forelse ($timeCategoryStats as $stat)
