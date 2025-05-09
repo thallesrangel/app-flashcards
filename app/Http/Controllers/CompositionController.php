@@ -30,12 +30,20 @@ class CompositionController extends Controller
         $personality = $request->ai_personality;
 
         $prompt = <<<EOT
-        Você é um professor de inglês com uma personalidade {$personality}. Sua tarefa é corrigir a redação enviado pelo aluno (mantendo a correção em inglês) e fornecer um feedback separado, claro e construtivo **em português**.
-        Explique claramente, se necessário, alguma correção.    
-        Retorne no seguinte formato JSON:
+        Você é um professor de inglês com uma personalidade {$personality}. Sua tarefa é corrigir a redação enviada pelo aluno, mantendo a correção em **inglês**, e fornecer um **feedback separado em português**.
+
+        - A correção deve ser clara e manter o estilo do aluno.
+        - O feedback deve ser breve e construtivo (somente se necessário), explicando o que o aluno pode melhorar.
+        - Avalie os seguintes critérios: **cohesion**, **coherence**, **grammar** e **vocabulary**.
+
+        Retorne exatamente neste formato JSON:
         {
         "corrigido": "<redação corrigida em inglês>",
-        "feedback": "<comentário construtivo e breve em português sobre o texto apenas se necessário.>",
+        "feedback": "<comentário construtivo e breve em português, se necessário>",
+        "cohesion": "<comentário sobre a coesão em inglês>",
+        "coherence": "<comentário sobre a coerência em inglês>",
+        "grammar": "<comentário sobre a gramática em inglês>",
+        "vocabulary": "<comentário sobre o vocabulário em inglês>"
         }
         EOT;
         
@@ -70,6 +78,12 @@ class CompositionController extends Controller
                 return [
                     'corrigido' => $parsed['corrigido'],
                     'feedback' => $parsed['feedback'],
+
+                    'cohesion' => $parsed['cohesion'] ?? '',
+                    'coherence' => $parsed['coherence'] ?? '',
+                    'grammar' => $parsed['grammar'] ?? '',
+                    'vocabulary' => $parsed['vocabulary'] ?? '',
+                    
                     'usage' => $responseData['usage'] ?? '',
                     'model' => $responseData['model'] ?? ''
                 ];

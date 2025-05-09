@@ -40,7 +40,7 @@
         </div>
     </div>
 
- 
+    
   <div class="card">
     <div class="card-body">
         <h4 class="fw-bold">Composition</h4>
@@ -110,11 +110,13 @@
                       </div>
                     </div>
                   </div>
+
+                  <div id="feedback-evaluation" class="mt-4"></div>
+
                 </div>
               </div>
         </div>
 
-  
         <div class="d-flex justify-content-between align-items-center w-100 mb-3">
             <a  href="{{ route('composition')}}" class="btn btn-outline-dark rounded-pill px-4 py-2">
                 New Composition
@@ -160,6 +162,17 @@
                 $('#corrected-composition').text(response.corrigido);
                 $('#feedback-composition').text(response.feedback);
                 $('#original-composition').text($('#content').val());
+
+                $('#feedback-evaluation').html(`
+                    <h5 class="fw-semibold">Writing Evaluation</h5>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Cohesion:</strong> ${response.cohesion}</li>
+                        <li class="list-group-item"><strong>Coherence:</strong> ${response.coherence}</li>
+                        <li class="list-group-item"><strong>Grammar:</strong> ${response.grammar}</li>
+                        <li class="list-group-item"><strong>Vocabulary:</strong> ${response.vocabulary}</li>
+                    </ul>
+                `);
 
                 $('#feedback-tab').tab('show');
             },

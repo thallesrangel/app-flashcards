@@ -43,11 +43,13 @@ Missões semanais criativas
 ///
 
 📝 Redações Temáticas Semanais
+
 Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
 
-A IA corrige e dá uma nota por coesão, coerência, gramática e vocabulário.
 
-Pode virar até um portfólio de escrita do aluno.
+
+
+
 ///
 🎯 Metas personalizadas por categoria
 Exemplo: “Esta semana, quero dominar 15 verbos irregulares”
