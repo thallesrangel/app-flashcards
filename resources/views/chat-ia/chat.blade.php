@@ -68,7 +68,7 @@
       <div class="chat-window mb-3 position-relative">
         <div class="chat-placeholder text-center">
 
-          <i class="bi bi-chat-right-dots fs-1 mb-3 d-block opacity-50"></i>
+          <i class="bi bi-chat-right-dots fs-1 mb-3 d-block"></i>
 
           <p>Start a conversation to practice your English skills.</p>
           <p class="small">Try asking a question or introducing yourself.</p>
