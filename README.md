@@ -1,30 +1,30 @@
 # TODO
+📝 Redações Temáticas Semanais
+
+Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
 
 ### Aprendizado com IA
 
 - Correção com pontuação CEFR (A1, A2, B1, B2...) — Classificação do nível da frase corrigida.
+
+
 - Análise de erros recorrentes — “Você erra muito o uso de preposições, veja essas dicas…”
 - Sugestões personalizadas de estudo — Ex: “Pratique perguntas no passado com foco em ‘Did you…’”
 - Favoritos e revisão manual — O usuário marca cards para revisar depois.
 - Integração com ferramentas externas (ex: Google Translate, DeepL para comparação).
-- Áudio com voz natural — Para treinar listening e pronúncia.
 - Notificações inteligentes — "Você não estuda há 3 dias, bora revisar o que você esqueceu?"
 - Conquistas — Para engajamento e gamificação.
 - Tempo médio de resposta por card — Para medir fluência.
 - Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
 - Feedback fonético: “O som do th está incorreto, tente como em think”    
+- Chat com IA: Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
 
-
-### Chat com IA
-Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
-
-### Outros
 
 - Aprendizado reverso: O sistema mostra uma frase correta e o usuário tenta "desfazer" a correção — ou seja, apontar os possíveis erros que levaram àquela versão.
 Isso treina pensamento crítico linguístico, como um professor.
 
+- Tandem IA-humano - ver os flashcards de outras pessoas
 
-Tandem IA-humano - ver os flashcards de outras pessoas
 
 
 ///
@@ -41,14 +41,6 @@ Missões semanais criativas
     A IA avalia criatividade, vocabulário e coesão, não só gramática.
 
 ///
-
-📝 Redações Temáticas Semanais
-
-Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
-
-
-
-
 
 ///
 🎯 Metas personalizadas por categoria

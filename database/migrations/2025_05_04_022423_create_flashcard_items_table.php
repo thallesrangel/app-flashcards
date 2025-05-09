@@ -20,6 +20,9 @@ return new class extends Migration
             
             $table->enum('level', ['very_easy', 'easy', 'medium', 'hard', 'very_hard'])->default('easy');
 
+            // $table->timestamp('started_at')->nullable();
+            // $table->timestamp('answered_at')->nullable();
+
             $table->boolean('deleted')->default(0);
             $table->timestamps();
         });
