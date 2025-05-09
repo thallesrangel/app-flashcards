@@ -42,18 +42,24 @@
         </div>
 
         <div class="col-12 col-sm-6 col-md-4 mt-2">
-
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h5 class="card-title mb-0">Sequência de Dias</h5>
-                  <i class="bi bi-calendar-check fs-4 text-secondary"></i>
-                </div>
-                <h2>{{ $practiceStreak }}</h2>
-                <p class="card-text">Dias consecutivos de prática</p>
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title mb-0">Sequência de Dias</h5>
+                <i class="bi bi-calendar-check fs-4 text-secondary"></i>
+              </div>
+              <h2>{{ $practiceStreak }}</h2>
+              <p class="card-text">Dias consecutivos de prática</p>
+        
+              <div class="d-flex gap-1 mt-3">
+                @for ($i = 1; $i <= 7; $i++)
+                  <div style="width: 25px; height: 10px;" class="rounded {{ $i <= $practiceStreak ? 'bg-warning' : 'bg-light border' }}"></div>
+                @endfor
               </div>
             </div>
+          </div>
         </div>
+        
     </div>
 
     <div class="row mt-5">

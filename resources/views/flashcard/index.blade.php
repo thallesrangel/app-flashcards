@@ -7,10 +7,9 @@
     <div class="container">
         <div class="row mb-5 text-center">
             <div class="col-12">
-                <h2 class="fw-semibold colores">Learn English with Flashcards and AI</h2>
+                <h2 class="fw-semibold colores">Practice English with flashcards and AI</h2>
                 <p class="text-muted fs-5">Create flashcards, practice your English, and receive feedback powered by artificial intelligence.</p>
                 
-
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
                     <a href="{{ route('dashboard') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill mb-2 mb-md-0">
                         <i class="bi bi-clipboard-data me-2"></i> Dashboard
@@ -28,7 +27,6 @@
                         <i class="bi bi-plus-lg me-2"></i> Create flashcard
                     </a>
                 </div>
-                
             </div>
 
         @if($data->isEmpty())
