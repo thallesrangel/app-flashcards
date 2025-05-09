@@ -65,7 +65,7 @@
       </select>
       
 
-      <div class="chat-window mb-3 position-relative">
+      <div class="chat-window mb-3 position-relative mt-2">
         <div class="chat-placeholder text-center">
 
           <i class="bi bi-chat-right-dots fs-1 mb-3 d-block"></i>
