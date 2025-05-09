@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('compositions', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->text('original_content')->nullable();
             $table->text('corrected_content')->nullable();
             $table->text('feedback')->nullable();
