@@ -146,10 +146,16 @@ class FlashcardController extends Controller
         $apiUrl = 'https://api.openai.com/v1/chat/completions';
 
         $prompt = <<<EOT
-        Você é um especialista em criar frases em inglês para ajudar os alunos a praticarem. Baseado no título do flashcard abaixo, crie uma pergunta ou frase para o aluno refletir e responder sobre o tema.".
+        Você é um especialista em criar situações e perguntas criativas em inglês para ajudar alunos a praticarem conversação com base em temas.  
+        Baseado no título do flashcard abaixo, crie uma nova pergunta que:
+        - NÃO repita a mesma estrutura, ideia ou foco de perguntas anteriores;
+        - Incentive reflexão, criatividade ou opinião pessoal;
+        - Seja sempre única e interessante;
+        - Evite frases genéricas ou que já foram feitas antes.
         EOT;
-
-        $userMessage = "O título do flashcard é: {$request->flashcard_title}";
+        
+        $userMessage = "Título do flashcard: {$request->flashcard_title}.";
+        $userMessage .= "\nA frase já usada foi: '{$request->current_idea_phrase}'. Evite repetir essa ideia ou abordagem.";
 
         $data = [
             'model' => $model,
@@ -159,7 +165,7 @@ class FlashcardController extends Controller
                 ['role' => 'user', 'content' => $userMessage]
             ]
         ];
-        
+
         $client = new Client();
 
         try {

@@ -78,19 +78,17 @@
       
       <div class="mb-3 d-flex gap-2">
         <button type="button" id="conversation-starter-ideas" class="btn btn-outline-dark rounded-pill px-4 py-2">
-          Conversation Starter <i class="bi bi-lightbulb me-2"></i>
+          Ideas <i class="bi bi-lightbulb me-2"></i>
         </button>
         <button class="btn btn-dark rounded-pill px-4 py-2" id="btn-gravar">
-            Gravar <i class="bi bi-mic"></i>
+            Record <i class="bi bi-mic"></i>
         </button>
       </div>
       
-      <div class="d-flex gap-2">
         <textarea class="form-control" id="content" placeholder="Type your message here..." rows="3"></textarea>
-        <button type="button" id="send-message" class="btn btn-dark rounded-pill px-4 py-2 align-self-end">
+        <button type="button" id="send-message" class="btn btn-dark rounded-pill px-4 py-2 mt-2">
           Send
         </button>
-      </div>
     </div>
   </div>
 </div>

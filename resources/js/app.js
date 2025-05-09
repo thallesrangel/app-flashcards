@@ -32,7 +32,8 @@ $(document).ready(function() {
         e.preventDefault();
  
         const flashcard_title = $('#flashcard-title').text();
-    
+        const current_idea_phrase = $('#idea-phrase').text()
+
         $('#loadingModal').modal('show');
         
         $.ajaxSetup({
@@ -46,7 +47,7 @@ $(document).ready(function() {
             method: 'POST',
             data: {
                 flashcard_title: flashcard_title,
-          
+                current_idea_phrase: current_idea_phrase
             },
             success: function(response) {
                 $('#idea-phrase').text(response.content);
