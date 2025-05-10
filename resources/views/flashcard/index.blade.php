@@ -36,9 +36,9 @@
         @if($data->isEmpty())
             <div class="card border-0">
                 <div class="card-body text-center py-5">
-                    <p class="fw-semibold fs-5 mb-2">Nenhum flashcard encontrado</p>
-                    <p class="text-muted mb-4">Crie seu primeiro flashcard para começar a praticar seu inglês.</p>
-                    <a href="{{ route('flashcard.create') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">Criar Flashcard</a>
+                    <p class="fw-semibold fs-5 mb-2">No flashcards found</p>
+                    <p class="text-muted mb-4">Create your first flashcard to start practicing your English.</p>
+                    <a href="{{ route('flashcard.create') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">Create Flashcard</a>
                 </div>
             </div>
         @else

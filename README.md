@@ -20,22 +20,6 @@ Isso treina pensamento crítico linguístico, como um professor.
 
 - Tandem IA-humano - ver os flashcards de outras pessoas
 
-
-
-///
-Missões semanais criativas
-
-    Exemplo:
-
-    “Crie um post de Instagram em inglês sobre seu dia”
-    “Escreva uma mensagem romântica”
-    “Defenda um ponto de vista polêmico”
-
-    A IA avalia criatividade, vocabulário e coesão, não só gramática.
-
-///
-
-///
 🎯 Metas personalizadas por categoria
     Exemplo: “Esta semana, quero dominar 15 verbos irregulares”
     O sistema adapta flashcards, textos e diálogos para essa meta.

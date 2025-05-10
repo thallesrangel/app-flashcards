@@ -9,7 +9,6 @@
           <a href="" target="_blank" class="text-dark text-decoration-none">
             <i class="bi bi-telegram fs-3"></i>
           </a>
-          <p>Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
