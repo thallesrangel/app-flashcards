@@ -94,6 +94,7 @@
                                 <div class="alert alert-warning" role="alert">
                                     <p><i class="bi bi-info-circle"></i> Feedback</p>
                                     <p id="ia-result-feedback"></p>
+                                    <p id="ia-result-CEFR"></p>
                                 </div>
 
                                 <div class="mb-3">

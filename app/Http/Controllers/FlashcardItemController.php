@@ -32,6 +32,8 @@ class FlashcardItemController extends Controller
         {
         "corrigido": "<texto corrigido em inglês>",
         "feedback": "<comentário construtivo e breve em português sobre o texto apenas se necessário.>"
+        "feedback": "<comentário construtivo e breve em português sobre o texto apenas se necessário.>",
+        "CEFR": "<Classificação do nível da frase corrigida: A1, A2, B1, B2, C1, C2>"
         }
         EOT;
         
@@ -66,6 +68,7 @@ class FlashcardItemController extends Controller
                 return [
                     'corrigido' => $parsed['corrigido'],
                     'feedback' => $parsed['feedback'],
+                    'CEFR' => $parsed['CEFR'],
                     'usage' => $responseData['usage'] ?? '',
                     'model' => $responseData['model'] ?? ''
                 ];
@@ -91,6 +94,7 @@ class FlashcardItemController extends Controller
             'corrigido' => 'required|string',
             'feedback' => 'required|string',
             'level' => 'required|string',
+            'CEFR' => 'required|string',
             'flashcard_id' => 'required|exists:flashcards,id'
         ]);
 
@@ -100,6 +104,8 @@ class FlashcardItemController extends Controller
         $practice->corrected_content = $validated['corrigido'];
         $practice->feedback = $validated['feedback'];
         $practice->level = $validated['level'];
+        $practice->CEFR = $validated['CEFR'];
+
         $practice->save();
 
         return response()->json([

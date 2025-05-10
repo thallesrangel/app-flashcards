@@ -17,9 +17,10 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->text('corrected_content')->nullable();
             $table->text('feedback')->nullable();
-            
+            $table->string('CEFR')->nullable();
             $table->enum('level', ['very_easy', 'easy', 'medium', 'hard', 'very_hard'])->default('easy');
-
+            $table->boolean('favorite')->default(0);
+            
             // $table->timestamp('started_at')->nullable();
             // $table->timestamp('answered_at')->nullable();
 

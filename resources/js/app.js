@@ -163,6 +163,7 @@ $(document).ready(function() {
             
                 $('#ia-result-corrected-content').text(response.corrigido);
                 $('#ia-result-feedback').text(response.feedback);
+                $('#ia-result-CEFR').text(response.CEFR)
 
             },
             error: function(xhr, status, error) {
@@ -186,6 +187,7 @@ $(document).ready(function() {
         const corrigido = $('#ia-result-corrected-content').text();
         const feedback = $('#ia-result-feedback').text();
         const level = $('#exercise-difficulty').val();
+        const CEFR = $('#ia-result-CEFR').text();
     
         $.ajaxSetup({
             headers: {
@@ -201,7 +203,8 @@ $(document).ready(function() {
                 corrigido: corrigido,
                 feedback: feedback,
                 flashcard_id: $('#flashcard_id').val(),
-                level: level
+                level: level,
+                CEFR: CEFR
             },
             success: function(response) {
                 alert_success('Salvo com sucesso!', 'Sua prática foi salva.');
@@ -241,6 +244,7 @@ $(document).ready(function() {
                     <p class="small text-muted d-flex justify-content-between">
                         <span>${item.created_at_formatted ?? ''}</span>
                         <span class="badge bg-dark">${traduzirNivel(item.level)}</span>
+                        <span class="badge bg-dark">${item.CEFR}</span>
                     </p>        
 
                     <h6 class="card-subtitle mb-2">Texto original:</h6>

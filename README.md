@@ -5,7 +5,6 @@ Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocab
 
 ### Aprendizado com IA
 
-- Correção com pontuação CEFR (A1, A2, B1, B2...) — Classificação do nível da frase corrigida.
 - Análise de erros recorrentes — “Você erra muito o uso de preposições, veja essas dicas…”
 - Sugestões personalizadas de estudo — Ex: “Pratique perguntas no passado com foco em ‘Did you…’”
 - Favoritos e revisão manual — O usuário marca cards para revisar depois.
