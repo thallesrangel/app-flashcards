@@ -15,24 +15,24 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            'Gramática',
-            'Vocabulário',
-            'Expressões Idiomáticas',
-            'Tempos Verbais',
-            'Pronomes',
-            'Preposições',
-            'Artigos',
-            'Adjetivos',
-            'Advérbios',
-            'Falsos Cognatos',
-            'Frases Comuns do Dia a Dia',
+            'Grammar',
+            'Vocabulary',
+            'Idiomatic Expressions',
+            'Verb Tenses',
+            'Pronouns',
+            'Prepositions',
+            'Articles',
+            'Adjectives',
+            'Adverbs',
+            'False Cognates',
+            'Common Everyday Phrases',
             'Phrasal Verbs',
-            'Conjunções',
-            'Perguntas e Respostas Frequentes',
-            'Vocabulário por Tema',
-            'Erros Comuns',
-            'Tradução Inversa',
-            'Verbos Irregulares'
+            'Conjunctions',
+            'Frequently Asked Questions',
+            'Thematic Vocabulary',
+            'Common Mistakes',
+            'Reverse Translation',
+            'Irregular Verbs'
         ];
 
         foreach ($categories as $name) {

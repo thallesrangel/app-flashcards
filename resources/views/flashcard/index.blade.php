@@ -23,6 +23,10 @@
                         <i class="bi bi-file-text me-2"></i> Composition
                     </a>
                 
+                    <a href="{{ route('weekly-missions') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill mb-2 mb-md-0">
+                        <i class="bi bi-lightning-charge me-2"></i> Weekly Missions
+                    </a>
+
                     <a href="{{ route('flashcard.create') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill mb-2 mb-md-0">
                         <i class="bi bi-plus-lg me-2"></i> Create flashcard
                     </a>

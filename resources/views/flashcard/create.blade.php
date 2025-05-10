@@ -9,12 +9,12 @@
         <i class="bi bi-arrow-left"></i> Back to list
     </a>
 
-    <h3 class="fw-semibold mb-4">Criar Novo Flashcard</h3>
+    <h3 class="fw-semibold mb-4">Create New Flashcard</h3>
 
     <form action="{{ route('flashcard.store') }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label for="title" class="form-label fw-medium">Título do Flashcard</label>
+            <label for="title" class="form-label fw-medium">Title Flashcard</label>
             <input 
                 type="text" 
                 class="form-control rounded-3" 
@@ -29,9 +29,10 @@
         </div>
 
         <div class="mb-4">
-            <p>Tema do seu flashcard</p>
+            <p>Theme of your flashcard</p>
+
             <button type="button" class="btn btn-sm btn-outline-dark rounded-pill px-4 py-2" data-bs-toggle="modal" data-bs-target="#manageCategoriesModal">
-                Gerenciar as categorias
+                Manage categories
             </button>
 
             <div id="category-radio-list" class="d-flex flex-wrap gap-2 mt-4">
@@ -51,7 +52,7 @@
         </div>
         
         <button type="submit" class="btn btn-dark rounded-pill px-4 py-2">
-            Salvar Flashcard
+            Save Flashcard
         </button>
     </form>
 </div>

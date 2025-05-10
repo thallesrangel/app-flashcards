@@ -11,6 +11,7 @@ use App\Http\Controllers\FlashcardItemController;
 
 use App\Http\Controllers\ChatIaController;
 use App\Http\Controllers\CompositionController;
+use App\Http\Controllers\WeeklyMissionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,12 +34,8 @@ Route::prefix('flashcard')->group(function () {
     Route::get('/create', [ FlashcardController::class, 'create' ])->name('flashcard.create');
     Route::post('/store', [ FlashcardController::class, 'store' ])->name('flashcard.store');
     Route::get('/show/{id}', [ FlashcardController::class, 'show' ])->name('flashcard.show');
-
     Route::get('/stats', [FlashcardController::class, 'getStats']);
-
-
     Route::get('/practice/{flashcard_id}/pdf', [FlashcardController::class, 'generatePdf'])->name('flashcard.pdf');
-
     Route::post('/new-idea', [ FlashcardController::class, 'newIdea' ]);
     Route::post('/new-word', [ FlashcardController::class, 'newWord' ]);
 });
@@ -58,7 +55,6 @@ Route::prefix('categories')->group(function () {
     Route::get('/list', [CategoryController::class, 'list']);
 });
 
-
 Route::prefix('chat-ia')->group(function () {
     Route::get('/', [ChatIaController::class, 'index'])->name('chat-ia');
     Route::post('/talk-ia', [ChatIaController::class, 'talkIa']);
@@ -68,4 +64,12 @@ Route::prefix('composition')->group(function () {
     Route::get('/', [CompositionController::class, 'index'])->name('composition');
     Route::post('/check-text', [ CompositionController::class, 'checkText' ]);
     Route::post('/new-idea', [ CompositionController::class, 'newIdea' ]);
+});
+
+Route::prefix('weekly-mission')->group(function () {
+    Route::get('/', [WeeklyMissionsController::class, 'index'])->name('weekly-missions');
+    Route::get('/create', [ WeeklyMissionsController::class, 'create' ])->name('weekly-missions.create');
+    Route::post('/store', [ WeeklyMissionsController::class, 'store' ])->name('weekly-missions.store');
+    Route::get('/show/{id}', [ WeeklyMissionsController::class, 'show' ])->name('weekly-missions.show');
+    Route::post('/check-text', [ WeeklyMissionsController::class, 'checkText' ]);
 });
