@@ -1,15 +1,5 @@
-# TODO
-📝 Redações Temáticas Semanais
-
-Toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
-
 ### Aprendizado com IA
-
-- Análise de erros recorrentes — “Você erra muito o uso de preposições, veja essas dicas…”
-- Sugestões personalizadas de estudo — Ex: “Pratique perguntas no passado com foco em ‘Did you…’”
 - Favoritos e revisão manual — O usuário marca cards para revisar depois.
-- Integração com ferramentas externas (ex: Google Translate, DeepL para comparação).
-
 - Tempo médio de resposta por card — Para medir fluência.
 - Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
 - Feedback fonético: “O som do th está incorreto, tente como em think”    
@@ -89,3 +79,9 @@ Libera itens ou conquistas no mapa.
 - Notificações inteligentes — "Você não estuda há 3 dias, bora revisar o que você esqueceu?"
 - Conquistas — Para engajamento e gamificação.
 - Chat com IA: Contexto contínuo — IA lembra do que foi falado antes para manter fluidez.
+- Redações Temáticas Semanais: toda semana, o sistema propõe um tema com base nos erros anteriores ou no vocabulário aprendido.
+- Análise de erros recorrentes — “Você erra muito o uso de preposições, veja essas dicas…”
+
+- Sugestões personalizadas de estudo — Ex: “Pratique perguntas no passado com foco em ‘Did you…’”
+
+- Integração com ferramentas externas 
