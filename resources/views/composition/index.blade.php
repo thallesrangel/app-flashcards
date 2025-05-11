@@ -30,11 +30,11 @@
     
     <div class="row mb-4">
         <div class="col-12">
-            <a href="{{ route('chat-ia') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+            <a href="{{ route('composition') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                 Composition
             </a>
 
-            <a href="{{ route('composition') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
+            <a href="{{ route('composition.historic') }}" class="btn btn-outline-dark px-4 py-2 rounded-pill">
                 historic
             </a>
         </div>
@@ -114,6 +114,11 @@
                   <div id="feedback-evaluation" class="mt-4"></div>
 
                 </div>
+
+                <button id="btn-save-composition" class="btn btn-dark rounded-pill px-4 py-2 w-100">
+                    <i class="bi bi-clipboard2"></i> Save this composition
+                </button>
+
               </div>
         </div>
 
@@ -222,6 +227,38 @@
                 $('#loadingModal').modal('hide');
                 alert_error('Erro', 'Não foi possível gerar uma nova ideia.');
             }
+        });
+    });
+
+    $('#btn-save-composition').on('click', function(e) {
+        e.preventDefault();
+    
+        const original_composition = $('#original-composition').text();
+        const corrected_composition = $('#corrected-composition').text();
+        const feedback_composition = $('#feedback-composition').text();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    
+        $.ajax({
+            url: `${APP_URL}/composition/store-practice`,
+            method: 'POST',
+            data: {
+                original_composition: original_composition,
+                corrected_composition: corrected_composition,
+                feedback_composition: feedback_composition,
+            },
+            success: function(response) {
+                alert_success('Saved successfully!', 'Your writing has been saved.');
+                window.location.href = response.route;
+            },
+            error: function(xhr) {
+                alert_error('Error', 'Could not save the practice.');
+            }
+
         });
     });
 

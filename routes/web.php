@@ -64,6 +64,8 @@ Route::prefix('composition')->group(function () {
     Route::get('/', [CompositionController::class, 'index'])->name('composition');
     Route::post('/check-text', [ CompositionController::class, 'checkText' ]);
     Route::post('/new-idea', [ CompositionController::class, 'newIdea' ]);
+    Route::post('/store-practice', [ CompositionController::class, 'storePractice' ]);
+    Route::get('/historic', [ CompositionController::class, 'historic' ])->name('composition.historic');
 });
 
 Route::prefix('weekly-mission')->group(function () {

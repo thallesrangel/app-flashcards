@@ -166,9 +166,33 @@ class CompositionController extends Controller
                 'error' => 'Erro na requisição: ' . $e->getMessage()
             ];
         }
+    }
 
+    public function storePractice(Request $request)
+    {
+        $validated = $request->validate([
+            'original_composition' => 'required|string',
+            'corrected_composition' => 'required|string',
+            'feedback_composition' => 'required|string',
+        ]);
+ 
+        $composition = new Compositions();
+        $composition->original_content = $validated['original_composition'];
+        $composition->corrected_content = $validated['corrected_composition'];
+        $composition->feedback = $validated['feedback_composition'];
+        $composition->save();
 
+        return response()->json([
+            'message' => 'composition saved!',
+            'item' => $composition,
+            'route' => route('composition')
+        ]);
+    }
 
-
+    public function historic()
+    {
+        $data = $this->compositionModel->get();
+        
+        return view('composition.historic', ['data' => $data ]);
     }
 }
