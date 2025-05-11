@@ -208,10 +208,7 @@
       const randomIndex = Math.floor(Math.random() * starters.length);
       const randomStarter = starters[randomIndex];
   
-      $('#content').val(randomStarter); // substitui o conteúdo do textarea com id="content"
+      $('#content').val(randomStarter);
     });
   </script>
-  
-
-
 @endsection

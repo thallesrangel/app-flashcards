@@ -2,7 +2,6 @@
 - Favoritos e revisão manual — O usuário marca cards para revisar depois.
 - Tempo médio de resposta por card — Para medir fluência.
 - Repetição espaçada (Spaced Repetition) — Reforçar os cards com base no desempenho.
-- Feedback fonético: “O som do th está incorreto, tente como em think”    
 
 - Aprendizado reverso: O sistema mostra uma frase correta e o usuário tenta "desfazer" a correção — ou seja, apontar os possíveis erros que levaram àquela versão.
 Isso treina pensamento crítico linguístico, como um professor.

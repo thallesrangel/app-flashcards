@@ -114,6 +114,22 @@ class FlashcardItemController extends Controller
         ]);
     }
 
+    public function updateFavorite($id, Request $request)
+    {
+        // Encontre o item pelo ID
+        $item = FlashcardItems::find($id);
+
+        if ($item) {
+            $item->favorite = $request->favorite;
+            $item->save();
+
+            return response()->json(['success' => true, 'favorite' => $item->favorite]);
+        }
+
+        return response()->json(['success' => false], 400);
+    }
+
+
     public function listByFlashcard($flashcard_id)
     {
         $items = FlashcardItems::where('flashcard_id', $flashcard_id)

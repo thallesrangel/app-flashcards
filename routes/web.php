@@ -44,6 +44,7 @@ Route::prefix('flashcard-item')->group(function () {
     Route::post('/check-text', [ FlashcardItemController::class, 'checkText' ]);
     Route::post('/store-practice', [ FlashcardItemController::class, 'storePractice' ]);
     Route::get('/list/{id}', [ FlashcardItemController::class, 'listByFlashcard' ]);
+    Route::post('/favorite/{id}', [ FlashcardItemController::class, 'updateFavorite' ]);
 
     Route::get('/practice/{flashcard_item_id}/pdf', [FlashcardItemController::class, 'generatePdf']);
 });

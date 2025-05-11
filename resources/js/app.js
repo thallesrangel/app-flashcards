@@ -277,6 +277,11 @@ $(document).ready(function() {
                         <a href="${APP_URL}/flashcard-item/practice/${item.id}/pdf" target="_blank" class="btn btn-sm btn-dark rounded-pill px-4 py-2">
                             Baixar em PDF <i class="bi bi-download"></i>
                         </a>
+
+                        <button class="btn btn-light text-danger rounded-pill favorite-btn" data-id="${item.id}" data-favorite="${item.favorite}" title="Favoritar">
+                            <i class="fs-4 bi ${item.favorite ? 'bi-heart-fill' : 'bi-heart'}"></i>
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -316,6 +321,50 @@ $(document).ready(function() {
     const flashcardId = $('#flashcard_id').val();
 
     loadPractices(flashcardId);
+
+
+    //
+    $(document).on('click', '.favorite-btn', function() {
+        const button = $(this);  // Armazenar o botão em uma variável para manipulação correta depois
+        const itemId = button.data('id');
+        const currentFavorite = button.data('favorite');
+    
+        const newFavorite = currentFavorite === 0 ? 1 : 0;
+        
+        // Atualiza o ícone
+        const heartIcon = newFavorite === 1 ? 'bi-heart-fill' : 'bi-heart';
+        button.find('i').removeClass('bi-heart-fill bi-heart').addClass(heartIcon);
+    
+        // Atualiza o estado do "favorite" no próprio botão
+        button.data('favorite', newFavorite);
+    
+        // Configuração do CSRF token
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    
+        // Enviar requisição AJAX
+        $.ajax({
+            url: `/flashcard-item/favorite/${itemId}`,
+            method: 'POST',
+            data: {
+                favorite: newFavorite
+            },
+            success: function(response) {
+                if (response.success) {
+                    // A ação foi bem-sucedida, você já atualizou o ícone e o estado no botão
+                } else {
+                    alert('Erro ao atualizar o favorito.');
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Ocorreu um erro ao tentar favoritar.');
+            }
+        });
+    });
+    
 });
 
 
